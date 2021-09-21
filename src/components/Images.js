@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Like from './Like';
 
 function Images() {
   const [error, setError] = useState(null);
@@ -36,6 +37,7 @@ function Images() {
             <img src={item.url} alt="Something super cool and spacey should be here!"/>
             
             {item.title} {item.date}
+            <Like />
           </li>
         ))}
       </ul>

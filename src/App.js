@@ -13,9 +13,6 @@ return (
   <>
   <Header />
   <Images />
-
-
-
   </>
 )
 
