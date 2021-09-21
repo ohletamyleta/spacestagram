@@ -33,7 +33,7 @@ function Images() {
       <ul>
         {items.map(item => (
           <li>
-            <img src={item.url} />
+            <img src={item.url} alt="Something super cool and spacey should be here!"/>
             
             {item.title} {item.date}
           </li>
