@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Like from './Like';
+import Container from 'react-bootstrap/Container'
+import ListGroup from 'react-bootstrap/ListGroup'
 
 function Images() {
   const [error, setError] = useState(null);
@@ -31,16 +33,24 @@ function Images() {
     return <div>Loading...</div>;
   } else {
     return (
+     <Container>
       <ul>
         {items.map(item => (
           <li>
-            <img src={item.url} alt="Something super cool and spacey should be here!"/>
             
-            {item.title} {item.date}
+            <img src={item.url} width="750" height="750" alt="Something super cool and spacey should be here!" />
+            <br></br>
             <Like />
+            <br></br>
+              <ListGroup>
+                <ListGroup.Item>Title: {item.title}</ListGroup.Item>
+                <ListGroup.Item>Date Taken: {item.date}</ListGroup.Item>
+                </ListGroup>  
           </li>
         ))}
       </ul>
+      </Container>
+   
     );
   }
 }
